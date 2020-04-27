@@ -1,0 +1,28 @@
+<section class="addcdr-form">
+ <form [formGroup]="deliveryForm" fxLayout="column" fxLayoutAlign="center center" (ngSubmit)="submitDeliveryForm()" #resetDeliveryForm="ngForm" novalidate>
+     <mat-form-field appearance="outline">
+         <mat-label>Service Name</mat-label>
+         <input type="text" matInput  formControlName="service_name">
+     </mat-form-field>
+     <mat-form-field appearance="outline">
+        <mat-label>Tag</mat-label>
+        <input type="text" matInput  formControlName="tag">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Bug Id</mat-label>
+        <input type="text" matInput  formControlName="bugid">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Submitter Id</mat-label>
+        <input type="text" matInput  formControlName="submitter_id">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Image Type</mat-label>
+        <select matNativeControl formControlName="image_type">
+            <option value="infra">Infra</option>
+            <option value="UI">UI</option>
+        </select>
+    </mat-form-field>
+    <button type="submit" mat-raised-button color="primary">Submit</button>
+ </form>
+</section>
